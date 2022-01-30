@@ -6,7 +6,8 @@
   </head>
   <body>
     <div id="app">
-      <button type="button">0</button>
+      <button v-on:click="add_counter"> {{ counter }} </button>
+      <button v-on:click="zero_counter">Обнулить</button>
     </div>
 
     <script type="module" src="script.js"></script>
