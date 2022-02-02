@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/assets/styles/index.css" />
+    <title>MarkedList</title>
+    <style>
+      .marked {
+        color: #efc14e;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" style="margin-top: 2rem">
+
+      <!-- <input placeholder="Поиск" type="search"
+        v-model.trim="filter.search" /> -->
+
+
+      <div class="container">
+
+        <div class="form-group">
+          <input type="search" v-model.trim="search" placeholder="Поиск" />
+        </div>
+
+          <ul></ul>
+            <li v-for="(item, index) of filteredEmails" :key="index">{{ item }}</li>
+            
+            <!-- <span v-if="meetup.organizing" class="meetup-card__badge badge badge_success">Организую</span> -->
+            <!-- <ul v-if="view === 'list'" class="meetups-list">
+
+            </ul> -->
+
+            <!-- <li class="marked">Email</li> -->
+          </ul>
+
+      </div>
+
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
