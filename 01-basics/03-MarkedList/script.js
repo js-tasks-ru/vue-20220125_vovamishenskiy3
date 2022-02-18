@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import { createApp } from './vendor/vue.esm-browser.js';
+>>>>>>> ff9215587f7ac3ab27f84ab2c15219bd0fa85c53
 
 import { createApp, defineComponent } from './vendor/vue.esm-browser.js';
 // From https://jsonplaceholder.typicode.com/comments
@@ -57,4 +61,20 @@ const vm = app.mount('#app');
 window.vm = vm;
 
 
-// Требуется создать Vue приложение
+createApp({
+  data() {
+    return {
+      emails,
+      filter: '',
+    };
+  },
+
+  computed: {
+    markedEmails() {
+      return this.emails.map((email) => ({
+        email,
+        marked: this.filter && email.includes(this.filter),
+      }));
+    },
+  },
+}).mount('#app');
