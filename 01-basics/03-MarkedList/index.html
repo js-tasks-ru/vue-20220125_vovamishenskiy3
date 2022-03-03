@@ -12,14 +12,38 @@
   </head>
   <body>
     <div id="app" style="margin-top: 2rem">
+
+      <!-- <input placeholder="Поиск" type="search"
+        v-model.trim="filter.search" /> -->
+
+
       <div class="container">
+
         <div class="form-group">
+<<<<<<< HEAD
+          <input type="search" v-model.trim="search" placeholder="Поиск" />
+        </div>
+
+          <ul></ul>
+            <li v-for="(item, index) of filteredEmails" :key="index">{{ item }}</li>
+            
+            <!-- <span v-if="meetup.organizing" class="meetup-card__badge badge badge_success">Организую</span> -->
+            <!-- <ul v-if="view === 'list'" class="meetups-list">
+
+            </ul> -->
+
+            <!-- <li class="marked">Email</li> -->
+          </ul>
+
+=======
           <input type="search" v-model.trim="filter" />
         </div>
         <ul>
           <li v-for="{ email, marked } in markedEmails" :class="{ marked }">{{ email }}</li>
         </ul>
+>>>>>>> ff9215587f7ac3ab27f84ab2c15219bd0fa85c53
       </div>
+
     </div>
 
     <script type="module" src="script.js"></script>
